@@ -45,3 +45,29 @@ Note: Works on python3.4 and above.
 
 
 [wb]: http://data.worldbank.org/indicator/PA.NUS.PPP
+
+
+## Updates by Omer:
+1. Actual site on http://salaryconverter.nigelb.me
+2. Downloaded new data 2021 and placed it in [2021_WorldBank_Data](2021_WorldBank_Data/API_PA.NUS.PRVT.PP_DS2_en_csv_v2_4354097.csv)
+3. The main formula to convert salary from source country to destination country is $$ Salary in To-Country = { Salary in From-Country \over PPP(From-Country) } x PPP(To-Country) $$
+
+4. Competing websites:
+   1. https://www.chrislross.com/PPPConverter/
+   2. https://www.numbeo.com/cost-of-living/compare_cities.jsp?country1=Pakistan&city1=Wah&country2=United+Arab+Emirates&city2=Dubai&amount=350%2C000.00&displayCurrency=PKR
+
+5. Interesting Information Websites:
+   1. https://www.worlddata.info/cost-of-living.php
+   2. https://www.kaggle.com/code/mhajabri/salary-and-purchasing-power-parity/notebook
+   
+#### Errors:   
+1. Removed errors by changing Flask version to `Flask==2.1.0` in requirements.txt
+2. Removed error by replacing code line in script `/opt/anaconda3/envs/pppconverter/lib/python3.8/site-packages/flask_script/__init__.py` as follows
+        - `#from flask._compat import text_type`
+        - `from flask_script._compat import text_type`
+3. Still webserver not working
+
+
+
+
+

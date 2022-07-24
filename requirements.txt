@@ -1,4 +1,4 @@
-Flask
+Flask==2.1.0
 Flask-Wtf
 Flask-Sqlalchemy
 Flask-Script
